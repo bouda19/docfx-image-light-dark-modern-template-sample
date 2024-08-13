@@ -2,6 +2,8 @@
 
 The goal of this project is to explain how to update image based on dark and light theme of a modern [Docfx](https://dotnet.github.io/docfx/index.html) template.
 
+The result can be found at the following [demo site](https://bouda19.github.io/docfx-image-light-dark-modern-template-sample/)
+
 ## Quick implementation
 
 Follow the official [Custom Template](https://dotnet.github.io/docfx/docs/template.html?tabs=modern#custom-template) guide to add a `main.css` CSS file into a custom template.
