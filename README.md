@@ -24,7 +24,9 @@ Supposed your light and dark images are located in the `./images` folder. Open t
 
 Then run the documenation by running the following command :
 
-`docfx ./Documentation/docfx.json --serve`
+```{pwsh}
+docfx ./Documentation/docfx.json --serve
+```
 
 ## Implementation from scratch
 
@@ -32,7 +34,7 @@ Install docfx
 
 ```{pwsh}
 dotnet tool update -g docfx
-`` `
+```
 
 Create a documentation folder
 
