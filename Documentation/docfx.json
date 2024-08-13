@@ -1,0 +1,50 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../Sources",
+          "files": [
+            "**/*.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "xref": [
+      "https://learn.microsoft.com/en-us/dotnet/.xrefmap.json"
+    ],
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern",
+      "my-template"
+    ],
+    "globalMetadata": {
+      "_appName": "Sample Library",
+      "_appTitle": "Sample Library",
+      "_appLogoPath": "images/dark-logo.png",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  }
+}

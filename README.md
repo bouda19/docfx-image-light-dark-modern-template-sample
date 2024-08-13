@@ -1,2 +1,55 @@
-# docfx-image-light-dark-modern-template-sample
-Docfx sample project to show how to update images depending on light and dark theme using modern template
+# Docfx images for light and dark theme
+
+The goal of this project is to explain how to update image based on dark and light theme of a modern [Docfx](https://dotnet.github.io/docfx/index.html) template.
+
+## Quick implementation
+
+Follow the official [Custom Template](https://dotnet.github.io/docfx/docs/template.html?tabs=modern#custom-template) guide to add a `main.css` CSS file into a custom template.
+
+Supposed your light and dark images are located in the `./images` folder. Open the `main.css` and add the following content :
+
+```{css}
+#logo {
+    margin-right: 10px;
+}
+
+[data-bs-theme=dark] #logo {
+    content:url("../images/dark-logo.png");
+}
+
+[data-bs-theme=light] #logo {
+    content:url("../images/light-logo.png");
+}
+```
+
+Then run the documenation by running the following command :
+
+`docfx ./Documentation/docfx.json --serve`
+
+## Implementation from scratch
+
+Install docfx
+
+```{pwsh}
+dotnet tool update -g docfx
+`` `
+
+Create a documentation folder
+
+```{pwsh}
+mkdir Documentation
+cd .\Documentation\
+```
+
+Create a new docset
+
+```{pwsh}
+docfx init
+```
+
+Create an image folder and a custom template folder
+
+```{pwsh}
+mkdir images
+mkdir my-template/public
+```
