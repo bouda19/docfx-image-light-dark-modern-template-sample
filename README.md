@@ -54,7 +54,7 @@ Create an image folder, a custom template folder and the `main.css` CSS file.
 ```{pwsh}
 mkdir images
 mkdir my-template/public
-type nul > my-template/public/main.css
+cd . >  my-template/public/main.css
 ```
 
 Add the following content into the `my-template/public/main.css` CSS file
