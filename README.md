@@ -47,9 +47,42 @@ Create a new docset
 docfx init
 ```
 
-Create an image folder and a custom template folder
+Create an image folder, a custom template folder and the `main.css` CSS file.
 
 ```{pwsh}
 mkdir images
 mkdir my-template/public
+type nul > my-template/public/main.css
+```
+
+Add the following content into the `my-template/public/main.css` CSS file
+
+```{css}
+#logo {
+    margin-right: 10px;
+}
+
+[data-bs-theme=dark] #logo {
+    content:url("../images/dark-logo.png");
+}
+
+[data-bs-theme=light] #logo {
+    content:url("../images/light-logo.png");
+}
+```
+
+Place your dark and light image into the `images` folder.
+
+Edit the `docfx.json` file and add the following content in the `globalMetadata` section :
+
+```{json}
+"_appLogoPath": "images/dark-logo.png",
+```
+
+Adapt the `dark-logo.png` to one of your image name.
+
+Start the docfx server
+
+```{pwsh}
+docfx --serve
 ```
