@@ -57,6 +57,8 @@ mkdir my-template/public
 cd . >  my-template/public/main.css
 ```
 
+Adapt `my-template` folder name with the name of your custom choice.
+
 Add the following content into the `my-template/public/main.css` CSS file
 
 ```{css}
@@ -81,6 +83,8 @@ Edit the `docfx.json` file and add the following content in the `globalMetadata`
 "_appLogoPath": "images/dark-logo.png",
 ```
 
+Adapt the `dark-logo.png` to one of your image name.
+
 Add the name of your template at the end of the `template` array of `docfx.json` file. It should look like this :
 
 ```{json}
@@ -91,7 +95,7 @@ Add the name of your template at the end of the `template` array of `docfx.json`
 ],
 ````
 
-Adapt the `dark-logo.png` to one of your image name.
+Adapt `my-template` with the name of your custom template folder name.
 
 Start the docfx server
 
