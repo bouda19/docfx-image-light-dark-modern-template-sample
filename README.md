@@ -81,6 +81,16 @@ Edit the `docfx.json` file and add the following content in the `globalMetadata`
 "_appLogoPath": "images/dark-logo.png",
 ```
 
+Add the name of your template at the end of the `template` array of `docfx.json` file. It should look like this :
+
+```{json}
+"template": [
+    "default",
+    "modern",
+    "my-template"
+],
+````
+
 Adapt the `dark-logo.png` to one of your image name.
 
 Start the docfx server
@@ -88,3 +98,7 @@ Start the docfx server
 ```{pwsh}
 docfx --serve
 ```
+
+Open your web broser and go into the `http://localhost:8080` url.
+
+Enjoy 😀
