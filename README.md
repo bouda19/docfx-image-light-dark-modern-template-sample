@@ -10,7 +10,7 @@ Follow the official [Custom Template](https://dotnet.github.io/docfx/docs/templa
 
 Supposed your light and dark images are located in the `./images` folder. Open the `main.css` and add the following content :
 
-```{css}
+```css
 #logo {
     margin-right: 10px;
 }
@@ -26,7 +26,7 @@ Supposed your light and dark images are located in the `./images` folder. Open t
 
 Then run the documenation by running the following command :
 
-```{pwsh}
+```cmd
 docfx ./Documentation/docfx.json --serve
 ```
 
@@ -34,26 +34,26 @@ docfx ./Documentation/docfx.json --serve
 
 Install docfx
 
-```{pwsh}
+```cmd
 dotnet tool update -g docfx
 ```
 
 Create a documentation folder
 
-```{pwsh}
+```cmd
 mkdir Documentation
 cd .\Documentation\
 ```
 
 Create a new docset
 
-```{pwsh}
+```cmd
 docfx init
 ```
 
 Create an image folder, a custom template folder and the `main.css` CSS file.
 
-```{pwsh}
+```cmd
 mkdir images
 mkdir my-template/public
 cd . >  my-template/public/main.css
@@ -63,7 +63,7 @@ Adapt `my-template` folder name with the name of your custom choice.
 
 Add the following content into the `my-template/public/main.css` CSS file
 
-```{css}
+```css
 #logo {
     margin-right: 10px;
 }
@@ -81,7 +81,7 @@ Place your dark and light image into the `images` folder.
 
 Edit the `docfx.json` file and add the following content in the `globalMetadata` section :
 
-```{json}
+```json
 "_appLogoPath": "images/dark-logo.png",
 ```
 
@@ -89,7 +89,7 @@ Adapt the `dark-logo.png` to one of your image name.
 
 Add the name of your template at the end of the `template` array of `docfx.json` file. It should look like this :
 
-```{json}
+```json
 "template": [
     "default",
     "modern",
@@ -101,7 +101,7 @@ Adapt `my-template` with the name of your custom template folder name.
 
 Start the docfx server
 
-```{pwsh}
+```cmd
 docfx --serve
 ```
 
